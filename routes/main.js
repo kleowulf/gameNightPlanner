@@ -8,5 +8,7 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 router.post("/login", authController.postLogin);
 router.get("/", homeController.getIndex)
+router.get("/signup", authController.getSignup);
+router.post("/signup", authController.postSignup);
 
 module.exports = router;
