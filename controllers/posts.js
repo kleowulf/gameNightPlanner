@@ -15,9 +15,9 @@ module.exports = {
           // Upload image to cloudinary
         //   const result = await cloudinary.uploader.upload(req.file.path);
     
-          await Post.create({
+          await Game.create({
             title: req.body.title,
-            image: result.secure_url,
+            image: res.secure_url,
             // cloudinaryId: result.public_id,
             caption: req.body.caption,
             likes: 0,
